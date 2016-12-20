@@ -17,5 +17,5 @@ Route::get('/', function () {
 
 AlexaRoute::intent('/request', 'GetLatestBills', function(){
     \Log::info('I got a request');
-    return Alexa::say('Yes Marci... this is really going to work!!');
+    return Alexa::say('Proposing an amendment to the Constitution of the United States to treat Puerto Rico as if it were a State for purposes of the election of the President and Vice President.');
 });
