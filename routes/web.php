@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+AlexaRoute::intent('/request', 'GetLatestBills', function(){
+    Alexa::say('Why was the little boy crying? Because he had a frog stapled to his face!');
+});
