@@ -15,7 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-AlexaRoute::intent('/request', 'GetLatestBills', function(){
+AlexaRoute::intent('/request', 'GetLatestBillsIntent', function(){
     \Log::info('I got a request');
     return Alexa::say('Why was the little boy crying? Because he had a frog stapled to his face!');
 });
