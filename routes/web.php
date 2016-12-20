@@ -17,5 +17,5 @@ Route::get('/', function () {
 
 AlexaRoute::intent('/request', 'GetLatestBills', function(){
     \Log::info('I got a request');
-    return Alexa::say('Why was the little boy crying? Because he had a frog stapled to his face!');
+    return Alexa::say('Yes Marci... this is really going to work!!');
 });
