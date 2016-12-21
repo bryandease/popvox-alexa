@@ -8,11 +8,11 @@ class SentimentController extends Controller
 {
     public function getBillSentiment()
     {
-//        $bill_type = Alexa::slot('BillType');
-//        $bill_number = Alexa::slot('BillNumber');
+        $bill_type = Alexa::slot('BillType');
+        $bill_number = Alexa::slot('BillNumber');
 
-        $bill_type = request('BillType');
-        $bill_number = request('BillNumber');
+//        $bill_type = request('BillType');
+//        $bill_number = request('BillNumber');
 
         $client = new Client();
         $url = 'https://www.popvox.com/api/bill-sentiment/114/' . $bill_type . $bill_number . '?pvoxKey=4a849e323b72398c498f546a047a4451b788a446';
