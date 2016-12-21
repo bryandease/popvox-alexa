@@ -11,6 +11,8 @@ class SentimentController extends Controller
         $bill_type = Alexa::slot('BillType');
         $bill_number = Alexa::slot('BillNumber');
 
+        \Log::info($bill_type);
+
 //        $bill_type = request('BillType');
 //        $bill_number = request('BillNumber');
 
