@@ -25,8 +25,8 @@ class SentimentController extends Controller
         $bill_info = $body->data;
 
         $total_users = $bill_info->POPVOX_users_supporting + $bill_info->POPVOX_users_opposing;
-        $support_percentage =  $total_users > 0 ? round((!empty($bill_info->POPVOX_users_supporting) ? count($bill_info->POPVOX_users_supporting) : 0) / $total_users * 100, 0) : 0;
-        $oppose_percentage =  $total_users > 0 ? round((!empty($bill_info->POPVOX_users_opposing) ? count($bill_info->POPVOX_users_opposing) : 0) / $total_users * 100, 0) : 0;
+        $support_percentage =  $total_users > 0 ? round((!empty($bill_info->POPVOX_users_supporting) ? $bill_info->POPVOX_users_supporting : 0) / $total_users * 100, 0) : 0;
+        $oppose_percentage =  $total_users > 0 ? round((!empty($bill_info->POPVOX_users_opposing) ? $bill_info->POPVOX_users_opposing : 0) / $total_users * 100, 0) : 0;
 
         $alexa_speech = $bill_info->bill_number . ' ' . $bill_info->bill_name;
         $alexa_speech .= ' <break time="2s"/> ';
