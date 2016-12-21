@@ -167,6 +167,7 @@ return [
          * Package Service Providers...
          */
         \Develpr\AlexaApp\Provider\LaravelServiceProvider::class,
+        \Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
         //
 
         /*
