@@ -29,7 +29,7 @@ class SentimentController extends Controller
         $oppose_percentage =  $total_users > 0 ? round($bill_info->POPVOX_users_opposing / $total_users * 100, 0) : 0;
 
         $alexa_speech = $bill_info->bill_number . ' ' . $bill_info->bill_name;
-        $alexa_speech .= ' <break time="2s"/> ';
+        $alexa_speech .= ' <break time="1s"/> ';
         $alexa_speech .= $support_percentage . ' percent of people support this bill and ' . $oppose_percentage . ' percent oppose it.';
 
         return Alexa::say($alexa_speech);
