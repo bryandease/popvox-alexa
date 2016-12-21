@@ -30,7 +30,7 @@ class SentimentController extends Controller
 
         $alexa_speech = $bill_info->bill_number . ' ' . $bill_info->bill_name;
         $alexa_speech .= ' <break time="2s"/> ';
-        $alexa_speech .= $support_percentage . ' percent of people support this bill and ' . $oppose_percentage . ' others oppose it.';
+        $alexa_speech .= $support_percentage . ' percent of people support this bill and ' . $oppose_percentage . ' percent oppose it.';
 
         return Alexa::say($alexa_speech);
     }
